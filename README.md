@@ -253,6 +253,8 @@ Thinking like a software engineer, not just a coder
 The Hospital Queue Management System is a practical, algorithm‑driven solution that demonstrates how data structures, backend logic, and frontend design can work together to solve real‑world problems.
 This project reflects industry‑level thinking and serves as a strong foundation for full‑stack and backend roles.
 
+Demo Link : https://aman83verma.github.io/Hospital_Queue_Management_System/
+
 👤 Author
 Aman Verma
 💻 Java | Spring Boot | React | DSA
