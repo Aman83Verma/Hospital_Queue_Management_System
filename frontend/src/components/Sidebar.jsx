@@ -1,14 +1,26 @@
 import "../styles/sidebar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <h3>Hospital</h3>
       <ul>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/register-patient">Register Patient</Link></li>
-        <li><Link to="/serve-multiple">Serve Multiple</Link></li>
+        <li>
+          <NavLink to="/dashboard" className={({ isActive }) => isActive ? "active" : ""}>
+            Dashboard
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/register-patient" className={({ isActive }) => isActive ? "active" : ""}>
+            Register Patient
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/serve-multiple" className={({ isActive }) => isActive ? "active" : ""}>
+            Serve Multiple
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
