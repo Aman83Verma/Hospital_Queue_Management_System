@@ -5,6 +5,9 @@ import com.hospital.management.exception.QueueEmptyException;
 import com.hospital.management.model.Patient;
 import com.hospital.management.model.QueueStatusResponse;
 import com.hospital.management.repository.PatientRepository;
+
+import jakarta.annotation.PostConstruct;
+
 import org.springframework.stereotype.Service;
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -141,5 +144,24 @@ public class QueueService {
 
         patientQueue.addAll(temp);
     }
+
+    @PostConstruct
+    public void loadPatientsFromDB() {
+        List<PatientEntity> patients = patientRepository.findAll();
+
+        for (PatientEntity p : patients) {
+            Patient patient = new Patient(
+                    p.getId(),
+                    p.getName(),
+                    p.getAge(),
+                    p.getSymptoms(),
+                    p.getEmergencyLevel()
+            );
+            patientQueue.add(patient);
+        }
+
+        System.out.println("Loaded " + patientQueue.size() + " patients into queue.");
+    }
+
 
 }
