@@ -15,8 +15,6 @@
 .dashboard-content {
   flex: 1;
   padding: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
   width: 100%;
 }
 
@@ -225,7 +223,7 @@
   color: #6b7280;
   font-size: 1rem;
   margin: 0;
-  max-width: 400px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -484,10 +482,17 @@
 /* Large Screens */
 @media (min-width: 1400px) {
   .dashboard-content {
-    padding: 2.5rem;
+    padding: 2.5rem 3rem;
   }
 
   .stats-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra Large Screens - Add padding but keep full width */
+@media (min-width: 1920px) {
+  .dashboard-content {
+    padding: 3rem 4rem;
   }
 }

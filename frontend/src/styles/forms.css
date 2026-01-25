@@ -2,8 +2,6 @@
 .page-content {
   flex: 1;
   padding: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
   width: 100%;
 }
 
@@ -64,8 +62,9 @@
 /* Form Wrapper */
 .form-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  width: 100%;
 }
 
 .form-card {
@@ -75,7 +74,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   transition: all 0.3s ease;
 }
 
@@ -492,11 +491,23 @@
 /* Large Screens */
 @media (min-width: 1400px) {
   .page-content {
-    padding: 2.5rem;
+    padding: 2.5rem 3rem;
   }
 
   .form-card {
-    max-width: 700px;
+    max-width: 900px;
     padding: 3rem;
+  }
+}
+
+/* Extra Large Screens - Add padding but keep full width */
+@media (min-width: 1920px) {
+  .page-content {
+    padding: 3rem 4rem;
+  }
+
+  .form-card {
+    max-width: 1000px;
+    padding: 3.5rem;
   }
 }

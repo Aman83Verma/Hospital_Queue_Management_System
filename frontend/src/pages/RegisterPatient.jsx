@@ -191,7 +191,7 @@ const RegisterPatient = () => {
                     <span>1 = Low Priority</span>
                     <span>2 = Medium</span>
                     <span>3 = High</span>
-                    <span>4-5 = Critical</span>
+                    <span>4,5 = Critical</span>
                   </div>
                 </div>
 
